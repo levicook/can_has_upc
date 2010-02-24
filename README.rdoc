@@ -1,6 +1,25 @@
-= can_has_upc
 
-Description goes here.
+= Retrieves UPC info from upcdatabase.com.
+
+  require 'rubygems'
+  require 'can_has_upc/hooks'
+  puts "String UPC:"
+  pp "015000127022".to_upc 
+
+Prints:
+
+  {"size"=>"7 oz",
+   "lastModified"=>"2006-11-04 16:59:22",
+   "issuerCountryCode"=>"us",
+   "found"=>true,
+   "mfrGLN"=>"0146000000012",
+   "ean"=>"0015000127022",
+   "description"=>"GERB ORG SF APPLSC 2PK DOT",
+   "upc"=>"015000127022",
+   "issuerCountry"=>"United States",
+   "message"=>"Database entry found",
+   "isCoupon"=>false,
+   "pendingUpdates"=>0}
 
 == Note on Patches/Pull Requests
  

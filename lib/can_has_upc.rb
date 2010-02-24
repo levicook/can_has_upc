@@ -1,4 +1,3 @@
-require "ostruct"
 require "xmlrpc/client"
 
 module CanHasUpc
@@ -9,7 +8,7 @@ module CanHasUpc
 
   def to_upc(len=12)
     client = XMLRPC::Client.new("www.upcdatabase.com", "/rpc")
-    OpenStruct.new(client.call("lookupUPC", formatted_upc_code(12)))
+    client.call("lookupUPC", formatted_upc_code(12))
   end
   
 end
